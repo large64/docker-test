@@ -2,8 +2,11 @@ FROM php:7.2
 
 # Install packages
 RUN apt-get update && apt-get install -y ssh git zip unzip wget
+
+# Install PHP extensions
 RUN pecl install apcu
 RUN docker-php-ext-enable apcu
+RUN docker-php-ext-install -j$(nproc) mysqli pcntl
 
 # Install composer
 RUN ssh-keyscan github.com > /etc/ssh/ssh_known_hosts \
