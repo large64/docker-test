@@ -1,7 +1,7 @@
 FROM php:7.2
 
 # Install packages
-RUN apt-get update && apt-get install -y ssh git zip unzip wget
+RUN apt-get update && apt-get install -y ssh git zip unzip wget mysql-client
 
 # Install PHP extensions
 RUN pecl install apcu
