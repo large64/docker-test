@@ -1,6 +1,6 @@
 FROM ruby:2.3.7
 
-RUN apt-get update && apt-get install php -y
+RUN apt-get update && apt-get install php cmake -y
 
 # Install Apache Thrift
 RUN  cd /tmp && wget http://www-us.apache.org/dist/thrift/0.10.0/thrift-0.10.0.tar.gz -O thrift.tar.gz \
