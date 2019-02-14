@@ -21,4 +21,3 @@ RUN ssh-keyscan github.com > /etc/ssh/ssh_known_hosts \
 RUN curl -O https://releases.hashicorp.com/packer/1.3.4/packer_1.3.4_linux_amd64.zip
 RUN unzip packer_1.3.4_linux_amd64.zip
 RUN mv packer /usr/local/bin
-RUN packer
